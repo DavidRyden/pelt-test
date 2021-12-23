@@ -1,0 +1,1 @@
+SELECT * FROM `david-ryden-dbt.sources_peltarion.manual_payments`
