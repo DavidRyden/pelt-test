@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: sources_peltarion
+    database: david-ryden-dbt
+    tables:
+      - name: manual_payments
+        columns:
+          - name: organizationId
+            tests:
+              - unique
+              - not_null
+      - name: newOrganizationCreated
+        columns:
+          - name: organizationId
+            tests:
+            - unique
+            - not_null
+      - name: newMemberAdded
+        columns:
+          - name: organizationId
+            tests:
+            - not_null
+          #  - relationships:
+          #    to: ref('newOrganizationCreated')
+          #    field: organizationId
+
+# to test: dbt test --select source:sources_peltarion
+
+
