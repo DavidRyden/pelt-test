@@ -21,9 +21,9 @@ sources:
           - name: organizationId
             tests:
             - not_null
-          #  - relationships:
-          #    to: ref('newOrganizationCreated')
-          #    field: organizationId
+            - relationships:
+                to: ref('newOrganizationCreated')
+                field: organizationId
 
 # to test: dbt test --select source:sources_peltarion
 

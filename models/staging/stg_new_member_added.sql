@@ -1,0 +1,1 @@
+select * from {{ source('sources_peltarion', 'newMemberAdded') }}
